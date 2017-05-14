@@ -8,17 +8,20 @@ import { RedditService } from '../../app/services/reddits.service';
 })
 export class RedditsPage {
 
+  items: any;
+
   constructor(public navCtrl: NavController, private redditService:RedditService) {
 
   }
 
   ngOnInit(){
-    this.getPosts('sports',5);
+    this.getPosts('sports',10);
   }
 
   getPosts(category, limit){
     this.redditService.getPosts(category, limit).subscribe(response => {
       console.log(response);
+      this.items = response.data.children;
     });
   }
 }
