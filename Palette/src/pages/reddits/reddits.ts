@@ -13,7 +13,12 @@ export class RedditsPage {
   }
 
   ngOnInit(){
-    console.log('onInit ran...');
+    this.getPosts('sports',5);
   }
 
+  getPosts(category, limit){
+    this.redditService.getPosts(category, limit).subscribe(response => {
+      console.log(response);
+    });
+  }
 }
