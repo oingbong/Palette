@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { RedditService } from '../../app/services/reddits.service';
 
 @Component({
   selector: 'reddits',
@@ -7,8 +8,12 @@ import { NavController } from 'ionic-angular';
 })
 export class RedditsPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private redditService:RedditService) {
 
+  }
+
+  ngOnInit(){
+    console.log('onInit ran...');
   }
 
 }
