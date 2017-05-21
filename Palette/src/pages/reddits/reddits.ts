@@ -10,13 +10,20 @@ import { DetailsPage } from '../details/details';
 export class RedditsPage {
 
   items: any;
+  category: any;
+  limit: any;
 
   constructor(public navCtrl: NavController, private redditService:RedditService) {
-
+    this.getDefaults();
   }
 
   ngOnInit(){
-    this.getPosts('sports',10);
+    this.getPosts(this.category, this.limit);
+  }
+
+  getDefaults(){
+    this.category = 'sports';
+    this.limit = 10;
   }
 
   getPosts(category, limit){
@@ -29,6 +36,10 @@ export class RedditsPage {
   viewItem(item){
     this.navCtrl.push(DetailsPage, {
       item:item
-    })
+    });
+  }
+
+  changeCategory(){
+    this.getPosts(this.category , this.limit);
   }
 }
