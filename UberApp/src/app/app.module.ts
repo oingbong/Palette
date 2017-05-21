@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MapComponent } from '../components/map/map';
+import {PickupComponent} from "../components/pickup/pickup";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MapComponent
+    MapComponent,
+    PickupComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { MapComponent } from '../components/map/map';
   entryComponents: [
     MyApp,
     HomePage,
-    MapComponent
+    MapComponent,
+    PickupComponent
   ],
   providers: [
     StatusBar,

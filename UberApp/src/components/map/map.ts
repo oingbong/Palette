@@ -1,4 +1,5 @@
 import { Component, OnInit , Input} from '@angular/core';
+import { PickupComponent } from '../pickup/pickup';
 
 /**
  * Generated class for the Map component.
@@ -8,7 +9,8 @@ import { Component, OnInit , Input} from '@angular/core';
  */
 @Component({
   selector: 'map',
-  templateUrl: 'map.html'
+  templateUrl: 'map.html',
+  entryComponents: [PickupComponent]
 })
 export class MapComponent implements OnInit {
 
