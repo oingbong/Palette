@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.5.0+20170314181206"
+  },
+  "globalDependencies": {
+    "google.maps": "registry:dt/google.maps#3.25.0+20161208205818"
+  }
+}
