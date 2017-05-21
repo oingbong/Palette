@@ -9,8 +9,18 @@ import { MapComponent } from '../../components/map/map';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  public isPickupRequested: boolean;
 
+  constructor(public navCtrl: NavController) {
+    this.isPickupRequested = false;
+  }
+
+  confirmPickup(){
+    this.isPickupRequested = true;
+  }
+
+  cancelPickup(){
+    this.isPickupRequested = false;
   }
 
 }
